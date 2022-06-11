@@ -48,8 +48,8 @@ while True:
         except : prettyprint("두 개만, 그리고 숫자만 입력해 주십시오.")
     if Input in ["permutation", "combination"]:
         try:
-            num1, num2 = tuple(input("="*80+"\n이 연산자는 두 개의 자연수를 취합니다. 띄어쓰기로 구분하여 입력하여주십시오.\n"+"="*80+"\n").split(" "))
-            if int(num1)<int(num2): prettyprint("첫 번째는 수는 두 번째 수보다 커야합니다.")
+            num1, num2 = tuple(input("="*80+"\n이 연산자는 두 개의 음수가 아닌 정수를 취합니다. 띄어쓰기로 구분하여 입력하여주십시오.\n"+"="*80+"\n").split(" "))
+            if int(num1)<int(num2) or int(num1) < 0 or int(num2) < 0: prettyprint("첫 번째는 수는 두 번째 수보다 크거나 같아야합니다.")
             elif Input == "permutation": prettyprint(permutation(int(num1), int(num2)))
             elif Input == "combination": prettyprint(combination(int(num1), int(num2)))
         except: prettyprint("두 개만, 그리고 자연수만 입력해 주십시오.")
