@@ -2,6 +2,12 @@ minus = lambda x, y: x-y
 divide = lambda x, y: x/y
 mod = lambda x, y: x%y
 exp = lambda x, y: x**y
+
+def isint(x): return int(x)==x
+def permutation(x, y): return factorial(x)/factorial(x-y)
+def combination(x, y): return permutation(x,y) * (1/factorial(y))
+def prettyprint(des): print(f"{'='*80}\n{des}\n{'='*80}")
+
 def plus(args):
     num=0
     for i in args: num+=i
@@ -10,8 +16,6 @@ def times(args):
     num=1
     for i in args:num*=i
     return num
-def isint(x):
-    return int(x)==x
 def root(x, y):
     if x < 0 : return str((-x)**(1/y))+"i"
     else : return (x)**(1/y)
@@ -20,12 +24,6 @@ def factorial(x):
     if not isint(x) or x<0 : return "자연수만 입력해주십시오."
     for i in range(x,0,-1): num *= i
     return num
-def permutation(x, y):
-    return factorial(x)/factorial(x-y)
-def combination(x, y):
-    return permutation(x,y) * (1/factorial(y))
-def prettyprint(des):
-    print(f"{'='*80}\n{des}\n{'='*80}")
 
 #permutation은 순열, combination은 조합을 나타냄.
 
