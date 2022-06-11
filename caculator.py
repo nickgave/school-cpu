@@ -27,6 +27,8 @@ def combination(x, y):
 def prettyprint(des):
     print(f"{'='*80}\n{des}\n{'='*80}")
 
+#permutation은 순열, combination은 조합을 나타냄.
+
 Sel = ["+", "-", "*", "/", "!", "^", "permutation", "combination", "root", "mod"]
 while True:
     Input = input("연산자를 선택하십시오.\n{}\n{}\n{}\n".format("="*80,", ".join(Sel),"="*80))
@@ -57,7 +59,4 @@ while True:
         try: 
             num1 = int(input("="*80+"\n이 연산자는 한 개의 자연수를 취합니다. 입력해주십시오.\n"+"="*80+"\n"))
             prettyprint(factorial(num1))
-        except: prettyprint("한 개만, 그리고 자연수만 입력해 주십시오.")
-
-        
-        
+        except: prettyprint("한 개만, 그리고 자연수만 입력해 주십시오.")     
